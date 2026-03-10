@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: oklch(55% 0.18 262);
+  --color-brand-light: oklch(96% 0.05 262);
+  --color-success: oklch(55% 0.18 155);
+  --color-warning: oklch(65% 0.18 55);
+  --color-waste: oklch(55% 0.18 25);
+}
