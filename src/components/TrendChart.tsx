@@ -143,6 +143,11 @@ export default function TrendChart({
                 offset: 12,
               }}
             />
+            <YAxis
+              yAxisId="eff"
+              orientation="right"
+              hide={true}
+            />
             <Tooltip content={<CustomTooltip />} />
             <Legend
               wrapperStyle={{ fontSize: 12, paddingTop: 16 }}
@@ -168,7 +173,7 @@ export default function TrendChart({
               connectNulls={false}
             />
             <Line
-              yAxisId="acus"
+              yAxisId="eff"
               dataKey="efficiency"
               name="ACUs/PR"
               stroke="#f59e0b"
