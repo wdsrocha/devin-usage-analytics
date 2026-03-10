@@ -11,6 +11,24 @@ interface FileUploadProps {
 export default function FileUpload({ onDataLoaded, onError, error }: FileUploadProps) {
   const inputRef = useRef<HTMLInputElement>(null)
   const [isDragging, setIsDragging] = useState(false)
+  const [loadingExample, setLoadingExample] = useState(false)
+
+  async function handleLoadExample() {
+    setLoadingExample(true)
+    try {
+      const res = await fetch('/example.json')
+      const raw: unknown = await res.json()
+      if (!validateSessionsData(raw)) {
+        onError('Invalid JSON structure. Expected { sessions: [], date_range: { start, end } }.')
+        return
+      }
+      onDataLoaded(raw)
+    } catch {
+      onError('Could not load example data.')
+    } finally {
+      setLoadingExample(false)
+    }
+  }
 
   function processFile(file: File) {
     if (!file.name.endsWith('.json') && file.type !== 'application/json') {
@@ -88,6 +106,23 @@ export default function FileUpload({ onDataLoaded, onError, error }: FileUploadP
             className="hidden"
             onChange={handleFileChange}
           />
+        </div>
+
+        <div className="flex items-center gap-3 text-gray-300">
+          <div className="flex-1 h-px bg-gray-200" />
+          <span className="text-xs">or</span>
+          <div className="flex-1 h-px bg-gray-200" />
+        </div>
+
+        <div className="text-center">
+          <button
+            onClick={handleLoadExample}
+            disabled={loadingExample}
+            className="text-sm font-medium text-indigo-600 hover:text-indigo-800 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer underline underline-offset-2"
+          >
+            {loadingExample ? 'Loading…' : 'Try with example data →'}
+          </button>
+          <p className="text-xs text-gray-400 mt-1">Star Wars Jedi Council org · 78 sessions</p>
         </div>
 
         {error && (

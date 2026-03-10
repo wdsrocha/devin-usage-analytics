@@ -1,0 +1,1022 @@
+{
+  "date_range": {
+    "start": "2024-09-01T00:00:00+00:00",
+    "end": "2025-02-28T00:00:00+00:00"
+  },
+  "sessions": [
+    {
+      "user_name": "Yoda",
+      "user_email": "yoda@jedi.order",
+      "session_name": "Refactor holocron data indexing service",
+      "created_at": "2024-09-05T09:14:00+00:00",
+      "acu_used": 2.1,
+      "url": "https://app.devin.ai/sessions/example-001",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/holocron-db/pull/1", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Yoda",
+      "user_email": "yoda@jedi.order",
+      "session_name": "Add unit tests for midi-chlorian counter API",
+      "created_at": "2024-10-03T11:02:00+00:00",
+      "acu_used": 3.4,
+      "url": "https://app.devin.ai/sessions/example-002",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/padawan-tracker/pull/1", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Yoda",
+      "user_email": "yoda@jedi.order",
+      "session_name": "Fix off-by-one in Jedi rank promotion algorithm",
+      "created_at": "2024-10-22T15:47:00+00:00",
+      "acu_used": 1.8,
+      "url": "https://app.devin.ai/sessions/example-003",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/padawan-tracker/pull/2", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Yoda",
+      "user_email": "yoda@jedi.order",
+      "session_name": "Optimize Force-sensitivity detection query",
+      "created_at": "2024-11-14T08:30:00+00:00",
+      "acu_used": 2.9,
+      "url": "https://app.devin.ai/sessions/example-004",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/jedi-archives/pull/1", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Yoda",
+      "user_email": "yoda@jedi.order",
+      "session_name": "Clean up deprecated Galactic Standard API calls",
+      "created_at": "2024-12-09T10:20:00+00:00",
+      "acu_used": 2.1,
+      "url": "https://app.devin.ai/sessions/example-005",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/force-comm/pull/1", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Yoda",
+      "user_email": "yoda@jedi.order",
+      "session_name": "Add pagination to mission assignment service",
+      "created_at": "2025-01-08T13:55:00+00:00",
+      "acu_used": 3.2,
+      "url": "https://app.devin.ai/sessions/example-006",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/republic-fleet/pull/1", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Yoda",
+      "user_email": "yoda@jedi.order",
+      "session_name": "Fix typo in Jedi Code validation rules",
+      "created_at": "2025-01-27T09:10:00+00:00",
+      "acu_used": 1.5,
+      "url": "https://app.devin.ai/sessions/example-007",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/temple-security/pull/1", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Yoda",
+      "user_email": "yoda@jedi.order",
+      "session_name": "Refactor meditation timer component",
+      "created_at": "2025-02-18T14:05:00+00:00",
+      "acu_used": 2.8,
+      "url": "https://app.devin.ai/sessions/example-008",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/padawan-tracker/pull/3", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Obi-Wan Kenobi",
+      "user_email": "obi-wan.kenobi@jedi.order",
+      "session_name": "Implement lightsaber configuration sync",
+      "created_at": "2024-09-12T10:30:00+00:00",
+      "acu_used": 6.2,
+      "url": "https://app.devin.ai/sessions/example-009",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/lightsaber-core/pull/1", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Obi-Wan Kenobi",
+      "user_email": "obi-wan.kenobi@jedi.order",
+      "session_name": "Add retry logic to Force-comm protocol",
+      "created_at": "2024-09-28T16:45:00+00:00",
+      "acu_used": 4.8,
+      "url": "https://app.devin.ai/sessions/example-010",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/force-comm/pull/2", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Obi-Wan Kenobi",
+      "user_email": "obi-wan.kenobi@jedi.order",
+      "session_name": "Fix race condition in clone deployment scheduler",
+      "created_at": "2024-10-15T11:20:00+00:00",
+      "acu_used": 8.1,
+      "url": "https://app.devin.ai/sessions/example-011",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/republic-fleet/pull/2", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Obi-Wan Kenobi",
+      "user_email": "obi-wan.kenobi@jedi.order",
+      "session_name": "Migrate Coruscant node to updated cluster config",
+      "created_at": "2024-11-02T09:00:00+00:00",
+      "acu_used": 5.5,
+      "url": "https://app.devin.ai/sessions/example-012",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/republic-fleet/pull/3", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Obi-Wan Kenobi",
+      "user_email": "obi-wan.kenobi@jedi.order",
+      "session_name": "Refactor Jedi Archives search with inverted index",
+      "created_at": "2024-11-20T14:10:00+00:00",
+      "acu_used": 7.3,
+      "url": "https://app.devin.ai/sessions/example-013",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/jedi-archives/pull/2", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Obi-Wan Kenobi",
+      "user_email": "obi-wan.kenobi@jedi.order",
+      "session_name": "Add dark side detection heuristics",
+      "created_at": "2024-12-04T08:55:00+00:00",
+      "acu_used": 6.9,
+      "url": "https://app.devin.ai/sessions/example-014",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/temple-security/pull/2", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Obi-Wan Kenobi",
+      "user_email": "obi-wan.kenobi@jedi.order",
+      "session_name": "Fix null pointer in Order 66 prevention system",
+      "created_at": "2024-12-18T15:30:00+00:00",
+      "acu_used": 4.2,
+      "url": "https://app.devin.ai/sessions/example-015",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/temple-security/pull/3", "pr_status": "closed" }
+      ]
+    },
+    {
+      "user_name": "Obi-Wan Kenobi",
+      "user_email": "obi-wan.kenobi@jedi.order",
+      "session_name": "Implement two-factor authentication for Temple access",
+      "created_at": "2025-01-14T10:40:00+00:00",
+      "acu_used": 7.8,
+      "url": "https://app.devin.ai/sessions/example-016",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/temple-security/pull/4", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Obi-Wan Kenobi",
+      "user_email": "obi-wan.kenobi@jedi.order",
+      "session_name": "Add rate limiting to Force-comm broadcast service",
+      "created_at": "2025-02-03T13:15:00+00:00",
+      "acu_used": 5.1,
+      "url": "https://app.devin.ai/sessions/example-017",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/force-comm/pull/3", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Obi-Wan Kenobi",
+      "user_email": "obi-wan.kenobi@jedi.order",
+      "session_name": "Optimize hologram transmission codec",
+      "created_at": "2025-02-21T11:50:00+00:00",
+      "acu_used": 9.4,
+      "url": "https://app.devin.ai/sessions/example-018",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/force-comm/pull/4", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Mace Windu",
+      "user_email": "mace.windu@jedi.order",
+      "session_name": "Implement Jedi Council voting system",
+      "created_at": "2024-09-19T09:45:00+00:00",
+      "acu_used": 9.3,
+      "url": "https://app.devin.ai/sessions/example-019",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/temple-security/pull/5", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Mace Windu",
+      "user_email": "mace.windu@jedi.order",
+      "session_name": "Migrate Republic Senate monitoring dashboard",
+      "created_at": "2024-10-08T14:00:00+00:00",
+      "acu_used": 11.2,
+      "url": "https://app.devin.ai/sessions/example-020",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/republic-fleet/pull/5", "pr_status": "closed" }
+      ]
+    },
+    {
+      "user_name": "Mace Windu",
+      "user_email": "mace.windu@jedi.order",
+      "session_name": "Add audit logging to lightsaber dispatch service",
+      "created_at": "2024-10-30T10:30:00+00:00",
+      "acu_used": 8.7,
+      "url": "https://app.devin.ai/sessions/example-021",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/lightsaber-core/pull/2", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Mace Windu",
+      "user_email": "mace.windu@jedi.order",
+      "session_name": "Refactor permission system for Padawan access",
+      "created_at": "2024-11-25T15:20:00+00:00",
+      "acu_used": 13.1,
+      "url": "https://app.devin.ai/sessions/example-022",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/temple-security/pull/6", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Mace Windu",
+      "user_email": "mace.windu@jedi.order",
+      "session_name": "Fix memory leak in droid translation layer",
+      "created_at": "2024-12-13T08:40:00+00:00",
+      "acu_used": 10.4,
+      "url": "https://app.devin.ai/sessions/example-023",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/jedi-archives/pull/3", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Mace Windu",
+      "user_email": "mace.windu@jedi.order",
+      "session_name": "Add Senate session transcription service",
+      "created_at": "2025-01-06T11:15:00+00:00",
+      "acu_used": 14.8,
+      "url": "https://app.devin.ai/sessions/example-024",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/force-comm/pull/5", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Mace Windu",
+      "user_email": "mace.windu@jedi.order",
+      "session_name": "Implement SLA monitoring for Temple uptime",
+      "created_at": "2025-01-30T14:50:00+00:00",
+      "acu_used": 12.2,
+      "url": "https://app.devin.ai/sessions/example-025",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/temple-security/pull/7", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Mace Windu",
+      "user_email": "mace.windu@jedi.order",
+      "session_name": "Debug holographic display rendering artifacts",
+      "created_at": "2025-02-14T09:25:00+00:00",
+      "acu_used": 9.8,
+      "url": "https://app.devin.ai/sessions/example-026",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/republic-fleet/pull/6", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Kit Fisto",
+      "user_email": "kit.fisto@jedi.order",
+      "session_name": "Add underwater communication protocol support",
+      "created_at": "2024-09-24T13:00:00+00:00",
+      "acu_used": 7.4,
+      "url": "https://app.devin.ai/sessions/example-027",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/force-comm/pull/6", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Kit Fisto",
+      "user_email": "kit.fisto@jedi.order",
+      "session_name": "Implement wave-form signal normalization",
+      "created_at": "2024-10-17T10:10:00+00:00",
+      "acu_used": 9.2,
+      "url": "https://app.devin.ai/sessions/example-028",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/force-comm/pull/7", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Kit Fisto",
+      "user_email": "kit.fisto@jedi.order",
+      "session_name": "Fix SSL handshake timeout in aquatic relay nodes",
+      "created_at": "2024-11-07T15:35:00+00:00",
+      "acu_used": 6.8,
+      "url": "https://app.devin.ai/sessions/example-029",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/force-comm/pull/8", "pr_status": "closed" }
+      ]
+    },
+    {
+      "user_name": "Kit Fisto",
+      "user_email": "kit.fisto@jedi.order",
+      "session_name": "Optimize aquatic sensor data ingestion pipeline",
+      "created_at": "2024-11-28T11:45:00+00:00",
+      "acu_used": 11.3,
+      "url": "https://app.devin.ai/sessions/example-030",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/jedi-archives/pull/4", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Kit Fisto",
+      "user_email": "kit.fisto@jedi.order",
+      "session_name": "Migrate nautolan crew manifest to new schema",
+      "created_at": "2024-12-20T09:50:00+00:00",
+      "acu_used": 8.5,
+      "url": "https://app.devin.ai/sessions/example-031",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/republic-fleet/pull/7", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Kit Fisto",
+      "user_email": "kit.fisto@jedi.order",
+      "session_name": "Refactor nautolan dialect translation module",
+      "created_at": "2025-01-16T14:20:00+00:00",
+      "acu_used": 10.1,
+      "url": "https://app.devin.ai/sessions/example-032",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/jedi-archives/pull/5", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Kit Fisto",
+      "user_email": "kit.fisto@jedi.order",
+      "session_name": "Add integration tests for deep-sea comms relay",
+      "created_at": "2025-02-07T10:05:00+00:00",
+      "acu_used": 7.9,
+      "url": "https://app.devin.ai/sessions/example-033",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/force-comm/pull/9", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Plo Koon",
+      "user_email": "plo.koon@jedi.order",
+      "session_name": "Implement oxygen recycler telemetry dashboard",
+      "created_at": "2024-09-10T08:20:00+00:00",
+      "acu_used": 10.6,
+      "url": "https://app.devin.ai/sessions/example-034",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/republic-fleet/pull/8", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Plo Koon",
+      "user_email": "plo.koon@jedi.order",
+      "session_name": "Fix parsing error in Kel Dor atmospheric model",
+      "created_at": "2024-10-12T13:30:00+00:00",
+      "acu_used": 12.4,
+      "url": "https://app.devin.ai/sessions/example-035",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/jedi-archives/pull/6", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Plo Koon",
+      "user_email": "plo.koon@jedi.order",
+      "session_name": "Add breathing apparatus diagnostics API",
+      "created_at": "2024-11-01T10:55:00+00:00",
+      "acu_used": 15.1,
+      "url": "https://app.devin.ai/sessions/example-036",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/lightsaber-core/pull/3", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Plo Koon",
+      "user_email": "plo.koon@jedi.order",
+      "session_name": "Migrate Wolfpack squad assignment service",
+      "created_at": "2024-11-22T14:40:00+00:00",
+      "acu_used": 9.8,
+      "url": "https://app.devin.ai/sessions/example-037",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/republic-fleet/pull/9", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Plo Koon",
+      "user_email": "plo.koon@jedi.order",
+      "session_name": "Refactor Clone trooper performance reviews",
+      "created_at": "2024-12-16T09:10:00+00:00",
+      "acu_used": 13.7,
+      "url": "https://app.devin.ai/sessions/example-038",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/republic-fleet/pull/10", "pr_status": "closed" }
+      ]
+    },
+    {
+      "user_name": "Plo Koon",
+      "user_email": "plo.koon@jedi.order",
+      "session_name": "Implement mission debriefing summarizer",
+      "created_at": "2025-01-21T15:00:00+00:00",
+      "acu_used": 16.2,
+      "url": "https://app.devin.ai/sessions/example-039",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/jedi-archives/pull/7", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Plo Koon",
+      "user_email": "plo.koon@jedi.order",
+      "session_name": "Add unit tests for atmospheric sensor integration",
+      "created_at": "2025-02-10T11:30:00+00:00",
+      "acu_used": 11.9,
+      "url": "https://app.devin.ai/sessions/example-040",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/jedi-archives/pull/8", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Ki-Adi-Mundi",
+      "user_email": "ki-adi-mundi@jedi.order",
+      "session_name": "Implement Cerean cognitive load balancer",
+      "created_at": "2024-09-30T10:15:00+00:00",
+      "acu_used": 14.2,
+      "url": "https://app.devin.ai/sessions/example-041",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/jedi-archives/pull/9", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Ki-Adi-Mundi",
+      "user_email": "ki-adi-mundi@jedi.order",
+      "session_name": "Fix binary brain synchronization service",
+      "created_at": "2024-10-25T13:50:00+00:00",
+      "acu_used": 18.5,
+      "url": "https://app.devin.ai/sessions/example-042",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/jedi-archives/pull/10", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Ki-Adi-Mundi",
+      "user_email": "ki-adi-mundi@jedi.order",
+      "session_name": "Migrate Outer Rim patrol scheduler",
+      "created_at": "2024-11-18T08:45:00+00:00",
+      "acu_used": 12.9,
+      "url": "https://app.devin.ai/sessions/example-043",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/republic-fleet/pull/11", "pr_status": "closed" }
+      ]
+    },
+    {
+      "user_name": "Ki-Adi-Mundi",
+      "user_email": "ki-adi-mundi@jedi.order",
+      "session_name": "Refactor Geonosis battle data analytics",
+      "created_at": "2024-12-07T14:20:00+00:00",
+      "acu_used": 20.1,
+      "url": "https://app.devin.ai/sessions/example-044",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/republic-fleet/pull/12", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Ki-Adi-Mundi",
+      "user_email": "ki-adi-mundi@jedi.order",
+      "session_name": "Add predictive analytics for separatist movement",
+      "created_at": "2025-01-11T10:35:00+00:00",
+      "acu_used": 16.8,
+      "url": "https://app.devin.ai/sessions/example-045",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/jedi-archives/pull/11", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Ki-Adi-Mundi",
+      "user_email": "ki-adi-mundi@jedi.order",
+      "session_name": "Debug sensor fusion in Outer Rim reconnaissance",
+      "created_at": "2025-02-04T15:10:00+00:00",
+      "acu_used": 19.4,
+      "url": "https://app.devin.ai/sessions/example-046",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/republic-fleet/pull/13", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Aayla Secura",
+      "user_email": "aayla.secura@jedi.order",
+      "session_name": "Implement Twi'lek cultural sensitivity module",
+      "created_at": "2024-09-16T11:05:00+00:00",
+      "acu_used": 12.3,
+      "url": "https://app.devin.ai/sessions/example-047",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/jedi-archives/pull/12", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Aayla Secura",
+      "user_email": "aayla.secura@jedi.order",
+      "session_name": "Fix encoding issue in lekku communication codec",
+      "created_at": "2024-10-06T14:30:00+00:00",
+      "acu_used": 15.8,
+      "url": "https://app.devin.ai/sessions/example-048",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/force-comm/pull/10", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Aayla Secura",
+      "user_email": "aayla.secura@jedi.order",
+      "session_name": "Migrate Quermia sector patrol logs",
+      "created_at": "2024-10-28T09:20:00+00:00",
+      "acu_used": 17.2,
+      "url": "https://app.devin.ai/sessions/example-049",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/republic-fleet/pull/14", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Aayla Secura",
+      "user_email": "aayla.secura@jedi.order",
+      "session_name": "Add battle meditation effectiveness metrics",
+      "created_at": "2024-11-15T15:45:00+00:00",
+      "acu_used": 11.4,
+      "url": "https://app.devin.ai/sessions/example-050",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/jedi-archives/pull/13", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Aayla Secura",
+      "user_email": "aayla.secura@jedi.order",
+      "session_name": "Refactor Felucia outpost sensor network",
+      "created_at": "2024-12-02T10:00:00+00:00",
+      "acu_used": 19.7,
+      "url": "https://app.devin.ai/sessions/example-051",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/republic-fleet/pull/15", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Aayla Secura",
+      "user_email": "aayla.secura@jedi.order",
+      "session_name": "Implement squad coordination broadcast service",
+      "created_at": "2024-12-28T13:40:00+00:00",
+      "acu_used": 14.6,
+      "url": "https://app.devin.ai/sessions/example-052",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/force-comm/pull/11", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Aayla Secura",
+      "user_email": "aayla.secura@jedi.order",
+      "session_name": "Debug hyperspace jump calculation edge cases",
+      "created_at": "2025-01-18T08:55:00+00:00",
+      "acu_used": 21.3,
+      "url": "https://app.devin.ai/sessions/example-053",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/republic-fleet/pull/16", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Aayla Secura",
+      "user_email": "aayla.secura@jedi.order",
+      "session_name": "Add integration tests for battle comms relay",
+      "created_at": "2025-02-12T14:15:00+00:00",
+      "acu_used": 16.9,
+      "url": "https://app.devin.ai/sessions/example-054",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/force-comm/pull/12", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Shaak Ti",
+      "user_email": "shaak.ti@jedi.order",
+      "session_name": "Implement clone training performance dashboard",
+      "created_at": "2024-09-22T10:30:00+00:00",
+      "acu_used": 9.1,
+      "url": "https://app.devin.ai/sessions/example-055",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/padawan-tracker/pull/4", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Shaak Ti",
+      "user_email": "shaak.ti@jedi.order",
+      "session_name": "Fix race condition in Kamino batch processor",
+      "created_at": "2024-10-19T15:00:00+00:00",
+      "acu_used": 11.7,
+      "url": "https://app.devin.ai/sessions/example-056",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/republic-fleet/pull/17", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Shaak Ti",
+      "user_email": "shaak.ti@jedi.order",
+      "session_name": "Migrate Tipoca City facility management API",
+      "created_at": "2024-11-10T09:40:00+00:00",
+      "acu_used": 14.3,
+      "url": "https://app.devin.ai/sessions/example-057",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/republic-fleet/pull/18", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Shaak Ti",
+      "user_email": "shaak.ti@jedi.order",
+      "session_name": "Refactor clone cadets progress tracking service",
+      "created_at": "2024-12-01T13:10:00+00:00",
+      "acu_used": 8.9,
+      "url": "https://app.devin.ai/sessions/example-058",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/padawan-tracker/pull/5", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Shaak Ti",
+      "user_email": "shaak.ti@jedi.order",
+      "session_name": "Add alerting for clone growth chamber anomalies",
+      "created_at": "2025-01-09T11:20:00+00:00",
+      "acu_used": 13.5,
+      "url": "https://app.devin.ai/sessions/example-059",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/republic-fleet/pull/19", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Shaak Ti",
+      "user_email": "shaak.ti@jedi.order",
+      "session_name": "Debug memory allocation in training sim engine",
+      "created_at": "2025-02-05T15:50:00+00:00",
+      "acu_used": 10.2,
+      "url": "https://app.devin.ai/sessions/example-060",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/padawan-tracker/pull/6", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Anakin Skywalker",
+      "user_email": "anakin.skywalker@jedi.order",
+      "session_name": "Implement pod racing telemetry analytics",
+      "created_at": "2024-09-08T14:20:00+00:00",
+      "acu_used": 18.4,
+      "url": "https://app.devin.ai/sessions/example-061",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/republic-fleet/pull/20", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Anakin Skywalker",
+      "user_email": "anakin.skywalker@jedi.order",
+      "session_name": "Fix anger management flag in Jedi behavior model",
+      "created_at": "2024-10-01T09:30:00+00:00",
+      "acu_used": 22.1,
+      "url": "https://app.devin.ai/sessions/example-062",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/temple-security/pull/8", "pr_status": "closed" }
+      ]
+    },
+    {
+      "user_name": "Anakin Skywalker",
+      "user_email": "anakin.skywalker@jedi.order",
+      "session_name": "Migrate Tatooine moisture farm sensor data",
+      "created_at": "2024-10-24T15:10:00+00:00",
+      "acu_used": 25.6,
+      "url": "https://app.devin.ai/sessions/example-063",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/jedi-archives/pull/14", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Anakin Skywalker",
+      "user_email": "anakin.skywalker@jedi.order",
+      "session_name": "Add shadow protocol to Force-comm encryption",
+      "created_at": "2024-11-12T10:45:00+00:00",
+      "acu_used": 19.8,
+      "url": "https://app.devin.ai/sessions/example-064",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/force-comm/pull/13", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Anakin Skywalker",
+      "user_email": "anakin.skywalker@jedi.order",
+      "session_name": "Refactor Chosen One destiny prediction engine",
+      "created_at": "2024-12-05T13:00:00+00:00",
+      "acu_used": 28.3,
+      "url": "https://app.devin.ai/sessions/example-065",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/jedi-archives/pull/15", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Anakin Skywalker",
+      "user_email": "anakin.skywalker@jedi.order",
+      "session_name": "Implement emergency Order 66 circuit breaker",
+      "created_at": "2024-12-30T09:15:00+00:00",
+      "acu_used": 21.7,
+      "url": "https://app.devin.ai/sessions/example-066",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/temple-security/pull/9", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Anakin Skywalker",
+      "user_email": "anakin.skywalker@jedi.order",
+      "session_name": "Debug emotions suppression middleware",
+      "created_at": "2025-01-25T14:30:00+00:00",
+      "acu_used": 24.5,
+      "url": "https://app.devin.ai/sessions/example-067",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/temple-security/pull/10", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Anakin Skywalker",
+      "user_email": "anakin.skywalker@jedi.order",
+      "session_name": "Add dark side power amplifier — revert commit",
+      "created_at": "2025-02-17T11:00:00+00:00",
+      "acu_used": 31.2,
+      "url": "https://app.devin.ai/sessions/example-068",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/lightsaber-core/pull/4", "pr_status": "closed" }
+      ]
+    },
+    {
+      "user_name": "Coleman Trebor",
+      "user_email": "coleman.trebor@jedi.order",
+      "session_name": "Rewrite entire Jedi Archives search engine from scratch",
+      "created_at": "2024-09-17T10:00:00+00:00",
+      "acu_used": 47.3,
+      "url": "https://app.devin.ai/sessions/example-074",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/jedi-archives/pull/17", "pr_status": "closed" }
+      ]
+    },
+    {
+      "user_name": "Coleman Trebor",
+      "user_email": "coleman.trebor@jedi.order",
+      "session_name": "Migrate all holocrons to new format simultaneously",
+      "created_at": "2024-10-20T14:30:00+00:00",
+      "acu_used": 53.8,
+      "url": "https://app.devin.ai/sessions/example-075",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/holocron-db/pull/2", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Coleman Trebor",
+      "user_email": "coleman.trebor@jedi.order",
+      "session_name": "Fix 'minor' off-by-one in Council seating algorithm",
+      "created_at": "2024-11-26T09:15:00+00:00",
+      "acu_used": 38.6,
+      "url": "https://app.devin.ai/sessions/example-076",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/temple-security/pull/12", "pr_status": "merged" }
+      ]
+    },
+    {
+      "user_name": "Coleman Trebor",
+      "user_email": "coleman.trebor@jedi.order",
+      "session_name": "Implement real-time battle analytics platform (v1 of 6)",
+      "created_at": "2025-01-15T11:40:00+00:00",
+      "acu_used": 61.2,
+      "url": "https://app.devin.ai/sessions/example-077",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/republic-fleet/pull/22", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Coleman Trebor",
+      "user_email": "coleman.trebor@jedi.order",
+      "session_name": "Complete Order 66 prevention system rewrite",
+      "created_at": "2025-02-20T15:00:00+00:00",
+      "acu_used": 44.9,
+      "url": "https://app.devin.ai/sessions/example-078",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/temple-security/pull/13", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Depa Billaba",
+      "user_email": "depa.billaba@jedi.order",
+      "session_name": "Implement mindfulness monitoring service",
+      "created_at": "2024-09-26T10:00:00+00:00",
+      "acu_used": 6.8,
+      "url": "https://app.devin.ai/sessions/example-069",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/padawan-tracker/pull/7", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Depa Billaba",
+      "user_email": "depa.billaba@jedi.order",
+      "session_name": "Fix null reference in Jedi mind trick validator",
+      "created_at": "2024-10-31T14:45:00+00:00",
+      "acu_used": 9.4,
+      "url": "https://app.devin.ai/sessions/example-070",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/temple-security/pull/11", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Depa Billaba",
+      "user_email": "depa.billaba@jedi.order",
+      "session_name": "Migrate Coruscant sector patrol schedule",
+      "created_at": "2024-11-29T09:55:00+00:00",
+      "acu_used": 7.2,
+      "url": "https://app.devin.ai/sessions/example-071",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/republic-fleet/pull/21", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Depa Billaba",
+      "user_email": "depa.billaba@jedi.order",
+      "session_name": "Refactor Jedi Code commentary index",
+      "created_at": "2025-01-03T13:20:00+00:00",
+      "acu_used": 11.8,
+      "url": "https://app.devin.ai/sessions/example-072",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/jedi-archives/pull/16", "pr_status": "open" }
+      ]
+    },
+    {
+      "user_name": "Depa Billaba",
+      "user_email": "depa.billaba@jedi.order",
+      "session_name": "Add meditation session logging API",
+      "created_at": "2025-02-09T10:35:00+00:00",
+      "acu_used": 8.5,
+      "url": "https://app.devin.ai/sessions/example-073",
+      "org_id": "jedi-order",
+      "org_name": "Jedi Order",
+      "pull_requests": [
+        { "pr_url": "https://github.com/jedi-order/padawan-tracker/pull/8", "pr_status": "open" }
+      ]
+    }
+  ]
+}
