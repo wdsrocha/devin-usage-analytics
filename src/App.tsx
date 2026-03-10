@@ -112,7 +112,7 @@ export default function App() {
         <div>
           <h1 className="text-lg font-bold text-gray-900">Devin Usage Analytics</h1>
           <p className="text-xs text-gray-400 mt-0.5">
-            {data.sessions.length.toLocaleString()} sessions · {data.date_range.start} → {data.date_range.end}
+            {data.sessions.length.toLocaleString()} sessions · {data.date_range.start.slice(0, 10)} → {data.date_range.end.slice(0, 10)}
           </p>
         </div>
         <button
