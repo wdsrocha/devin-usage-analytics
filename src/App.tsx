@@ -5,6 +5,7 @@ import FileUpload from '@/components/FileUpload'
 import Filters from '@/components/Filters'
 import SummaryCards from '@/components/SummaryCards'
 import TrendChart from '@/components/TrendChart'
+import AdoptionChart from '@/components/AdoptionChart'
 import UserEfficiencyChart from '@/components/UserEfficiencyChart'
 import SessionTable from '@/components/SessionTable'
 
@@ -12,6 +13,7 @@ import {
   applyFilters,
   computeSummaryMetrics,
   computeTrendBuckets,
+  computeAdoptionBuckets,
   computeUserEfficiency,
   computeSessionRows,
   getUniqueUsers,
@@ -82,6 +84,17 @@ export default function App() {
       granularity,
     )
   }, [filteredSessions, filters, granularity])
+
+  const adoptionBuckets = useMemo(() => {
+    if (!data || !filters) return []
+    return computeAdoptionBuckets(
+      data.sessions,
+      filteredSessions,
+      parseISO(filters.dateRange.start),
+      parseISO(filters.dateRange.end),
+      granularity,
+    )
+  }, [data, filteredSessions, filters, granularity])
 
   const userEfficiency = useMemo(
     () => computeUserEfficiency(filteredSessions),
@@ -159,6 +172,13 @@ export default function App() {
             {/* Trend chart */}
             <TrendChart
               buckets={trendBuckets}
+              granularity={granularity}
+              onGranularityChange={setGranularity}
+            />
+
+            {/* Adoption chart */}
+            <AdoptionChart
+              buckets={adoptionBuckets}
               granularity={granularity}
               onGranularityChange={setGranularity}
             />

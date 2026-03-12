@@ -11,6 +11,7 @@ import type {
   FilterState,
   SummaryMetrics,
   TrendBucket,
+  AdoptionBucket,
   UserEfficiencyRow,
   SessionRow,
   SessionsData,
@@ -191,6 +192,70 @@ export function computeSessionRows(sessions: Session[]): SessionRow[] {
     mergedPrs: session.pull_requests.filter((pr) => pr.pr_status === 'merged'),
     allPrs: session.pull_requests,
   }))
+}
+
+// ── Adoption (unique users per period) ───────────────────────────────────────
+
+/**
+ * Computes per-bucket active users (MAU) and new users (first-ever session).
+ *
+ * - activeUsers: distinct user_emails in filteredSessions for the bucket.
+ * - newUsers: users whose first-ever session (across ALL sessions, unfiltered)
+ *   falls in this bucket. Uses allSessions so a user who joined in Feb/2025
+ *   but is only searched from Mar/2025 is still correctly marked as "existing".
+ */
+export function computeAdoptionBuckets(
+  allSessions: Session[],
+  filteredSessions: Session[],
+  dateRangeStart: Date,
+  dateRangeEnd: Date,
+  granularity: BucketGranularity,
+): AdoptionBucket[] {
+  // Build first-session-date map from ALL sessions (unfiltered)
+  const firstSessionDate = new Map<string, Date>()
+  for (const s of allSessions) {
+    const date = parseISO(s.created_at)
+    const email = s.user_email ?? '(unknown)'
+    const existing = firstSessionDate.get(email)
+    if (!existing || date < existing) {
+      firstSessionDate.set(email, date)
+    }
+  }
+
+  // Build per-bucket sets from filteredSessions
+  const activeUsersMap = new Map<string, Set<string>>()
+  const newUsersMap = new Map<string, Set<string>>()
+
+  for (const s of filteredSessions) {
+    const date = parseISO(s.created_at)
+    const bucketStart = getBucketStart(date, granularity)
+    const key = getBucketKey(bucketStart, granularity)
+    const email = s.user_email ?? '(unknown)'
+
+    if (!activeUsersMap.has(key)) activeUsersMap.set(key, new Set())
+    activeUsersMap.get(key)!.add(email)
+
+    const firstDate = firstSessionDate.get(email)
+    if (firstDate) {
+      const firstKey = getBucketKey(getBucketStart(firstDate, granularity), granularity)
+      if (firstKey === key) {
+        if (!newUsersMap.has(key)) newUsersMap.set(key, new Set())
+        newUsersMap.get(key)!.add(email)
+      }
+    }
+  }
+
+  const bucketStarts = getBucketStarts(dateRangeStart, dateRangeEnd, granularity)
+
+  return bucketStarts.map((bucketStart) => {
+    const key = getBucketKey(bucketStart, granularity)
+    return {
+      label: formatBucketLabel(bucketStart, granularity),
+      key,
+      activeUsers: activeUsersMap.get(key)?.size ?? 0,
+      newUsers: newUsersMap.get(key)?.size ?? 0,
+    }
+  })
 }
 
 // ── Unique users list (for filter dropdown — from unfiltered data) ─────────────

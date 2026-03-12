@@ -57,6 +57,15 @@ export interface TrendBucket {
   efficiency: number | null
 }
 
+export interface AdoptionBucket {
+  label: string
+  key: string
+  /** Distinct users with at least one session in this period */
+  activeUsers: number
+  /** Users whose first-ever session (across all data) falls in this period */
+  newUsers: number
+}
+
 export interface UserEfficiencyRow {
   userName: string
   userEmail: string
