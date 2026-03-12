@@ -10,6 +10,7 @@ interface SessionTableProps {
 
 type SortKey = 'date' | 'userName' | 'acuUsed' | 'mergedPrCount'
 type SortDir = 'asc' | 'desc'
+type PrStatus = 'merged' | 'open' | 'closed' | 'none'
 
 function PrBadge({ pr }: { pr: PullRequest }) {
   const colors: Record<PullRequest['pr_status'], string> = {
@@ -71,14 +72,27 @@ function PaginationBar({ currentPage, totalPages, onPrev, onNext }: PaginationBa
   )
 }
 
+const PR_STATUS_OPTIONS: { value: PrStatus; label: string }[] = [
+  { value: 'merged', label: 'Merged' },
+  { value: 'open',   label: 'Open' },
+  { value: 'closed', label: 'Closed' },
+  { value: 'none',   label: 'No PRs' },
+]
+
 export default function SessionTable({ rows }: SessionTableProps) {
-  const [searchQuery, setSearchQuery] = useState('')
-  const [sortKey, setSortKey] = useState<SortKey>('date')
-  const [sortDir, setSortDir] = useState<SortDir>('desc')
-  const [currentPage, setCurrentPage] = useState(1)
+  const [searchQuery, setSearchQuery]   = useState('')
+  const [sortKey, setSortKey]           = useState<SortKey>('date')
+  const [sortDir, setSortDir]           = useState<SortDir>('desc')
+  const [currentPage, setCurrentPage]   = useState(1)
+  const [acuMin, setAcuMin]             = useState('')
+  const [acuMax, setAcuMax]             = useState('')
+  const [prStatusFilter, setPrStatusFilter] = useState<Set<PrStatus>>(new Set())
 
   // Reset to page 1 when the incoming rows change (global filter changed)
   useEffect(() => { setCurrentPage(1) }, [rows])
+
+  // Reset to page 1 when local filters change
+  useEffect(() => { setCurrentPage(1) }, [acuMin, acuMax, prStatusFilter])
 
   function toggleSort(key: SortKey) {
     if (sortKey === key) {
@@ -95,17 +109,54 @@ export default function SessionTable({ rows }: SessionTableProps) {
     setCurrentPage(1)
   }
 
+  function togglePrStatus(status: PrStatus) {
+    setPrStatusFilter((prev) => {
+      const next = new Set(prev)
+      if (next.has(status)) next.delete(status)
+      else next.add(status)
+      return next
+    })
+  }
+
+  const hasActiveFilters = acuMin !== '' || acuMax !== '' || prStatusFilter.size > 0
+
+  function clearFilters() {
+    setAcuMin('')
+    setAcuMax('')
+    setPrStatusFilter(new Set())
+  }
+
   const processed = useMemo(() => {
     const query = searchQuery.toLowerCase().trim()
     let result = rows
+
+    // Text search
     if (query) {
-      result = rows.filter(
+      result = result.filter(
         (r) =>
           r.userName.toLowerCase().includes(query) ||
           r.userEmail.toLowerCase().includes(query) ||
           r.sessionName.toLowerCase().includes(query),
       )
     }
+
+    // ACU range
+    const minVal = acuMin !== '' ? parseFloat(acuMin) : null
+    const maxVal = acuMax !== '' ? parseFloat(acuMax) : null
+    if (minVal !== null && !isNaN(minVal)) result = result.filter((r) => r.acuUsed >= minVal)
+    if (maxVal !== null && !isNaN(maxVal)) result = result.filter((r) => r.acuUsed <= maxVal)
+
+    // PR status (OR logic)
+    if (prStatusFilter.size > 0) {
+      result = result.filter((r) => {
+        if (prStatusFilter.has('none')   && r.allPrs.length === 0) return true
+        if (prStatusFilter.has('merged') && r.allPrs.some((p) => p.pr_status === 'merged')) return true
+        if (prStatusFilter.has('open')   && r.allPrs.some((p) => p.pr_status === 'open'))   return true
+        if (prStatusFilter.has('closed') && r.allPrs.some((p) => p.pr_status === 'closed')) return true
+        return false
+      })
+    }
+
     return [...result].sort((a, b) => {
       let cmp = 0
       switch (sortKey) {
@@ -124,7 +175,7 @@ export default function SessionTable({ rows }: SessionTableProps) {
       }
       return sortDir === 'asc' ? cmp : -cmp
     })
-  }, [rows, searchQuery, sortKey, sortDir])
+  }, [rows, searchQuery, acuMin, acuMax, prStatusFilter, sortKey, sortDir])
 
   const totalPages = Math.max(1, Math.ceil(processed.length / PAGE_SIZE))
   const safePage = Math.min(currentPage, totalPages)
@@ -148,23 +199,84 @@ export default function SessionTable({ rows }: SessionTableProps) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
       {/* Header */}
-      <div className="p-5 border-b border-gray-100 flex items-center justify-between gap-4 flex-wrap">
-        <div>
-          <h2 className="text-base font-semibold text-gray-900">Session Details</h2>
-          <p className="text-xs text-gray-400 mt-0.5">
-            {processed.length === 0
-              ? 'No sessions'
-              : `Showing ${firstItem}–${lastItem} of ${processed.length.toLocaleString()}`}
-            {processed.length !== rows.length && ` (filtered from ${rows.length.toLocaleString()})`}
-          </p>
+      <div className="p-5 border-b border-gray-100">
+        <div className="flex items-center justify-between gap-4 flex-wrap">
+          <div>
+            <h2 className="text-base font-semibold text-gray-900">Session Details</h2>
+            <p className="text-xs text-gray-400 mt-0.5">
+              {processed.length === 0
+                ? 'No sessions'
+                : `Showing ${firstItem}–${lastItem} of ${processed.length.toLocaleString()}`}
+              {processed.length !== rows.length && ` (filtered from ${rows.length.toLocaleString()})`}
+            </p>
+          </div>
+          <input
+            type="search"
+            placeholder="Search by user or session name…"
+            value={searchQuery}
+            onChange={handleSearchChange}
+            className="text-sm border border-gray-300 rounded-lg px-3 py-2 w-64 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
         </div>
-        <input
-          type="search"
-          placeholder="Search by user or session name…"
-          value={searchQuery}
-          onChange={handleSearchChange}
-          className="text-sm border border-gray-300 rounded-lg px-3 py-2 w-64 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-        />
+
+        {/* Filter bar */}
+        <div className="mt-3 flex items-center gap-4 flex-wrap">
+          {/* ACU range */}
+          <div className="flex items-center gap-1.5 text-sm text-gray-500">
+            <span className="text-xs font-medium text-gray-400 uppercase tracking-wide">ACUs</span>
+            <input
+              type="number"
+              min="0"
+              placeholder="Min"
+              value={acuMin}
+              onChange={(e) => setAcuMin(e.target.value)}
+              className="w-20 text-sm border border-gray-300 rounded-lg px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            />
+            <span className="text-gray-300">–</span>
+            <input
+              type="number"
+              min="0"
+              placeholder="Max"
+              value={acuMax}
+              onChange={(e) => setAcuMax(e.target.value)}
+              className="w-20 text-sm border border-gray-300 rounded-lg px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            />
+          </div>
+
+          {/* Divider */}
+          <div className="h-5 w-px bg-gray-200" />
+
+          {/* PR Status pills */}
+          <div className="flex items-center gap-1.5">
+            <span className="text-xs font-medium text-gray-400 uppercase tracking-wide">PR Status</span>
+            {PR_STATUS_OPTIONS.map(({ value, label }) => {
+              const active = prStatusFilter.has(value)
+              return (
+                <button
+                  key={value}
+                  onClick={() => togglePrStatus(value)}
+                  className={`text-xs px-2.5 py-1 rounded-full border cursor-pointer transition-colors ${
+                    active
+                      ? 'bg-indigo-600 text-white border-indigo-600'
+                      : 'bg-white text-gray-500 border-gray-300 hover:border-indigo-400 hover:text-indigo-600'
+                  }`}
+                >
+                  {label}
+                </button>
+              )
+            })}
+          </div>
+
+          {/* Clear filters */}
+          {hasActiveFilters && (
+            <button
+              onClick={clearFilters}
+              className="text-xs text-gray-400 hover:text-gray-700 cursor-pointer transition-colors ml-auto"
+            >
+              Clear filters ×
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Table */}
@@ -188,7 +300,7 @@ export default function SessionTable({ rows }: SessionTableProps) {
             {pageRows.length === 0 ? (
               <tr>
                 <td colSpan={6} className="py-12 text-center text-sm text-gray-400">
-                  No sessions match your search.
+                  No sessions match your filters.
                 </td>
               </tr>
             ) : (
